@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <string>
+#include <vector>
 
 // const std::string ABOVE_DIACRITICS[50] = {
 //     "\u030d", /*     ̍     */ "\u030e", /*     ̎     */ "\u0304", /*     ̄     */ "\u0305", /*     ̅     */
@@ -50,6 +51,7 @@ public:
     ~Zalgo();
     std::string getDiacritic(int, int);
     std::string generateLine(std::string, int, int, int);
+    std::vector<int> argumentParser(std::string);
 
 private:
     const std::string ABOVE_DIACRITICS[50] = {

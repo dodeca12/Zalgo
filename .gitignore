@@ -32,3 +32,6 @@ relative/path/to/dir/anotherfile
 
 # Ignore subdirectory with name "test"
 test/
+
+# Ignore dot files
+.vscode/

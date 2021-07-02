@@ -89,12 +89,8 @@ std::vector<int> argumentParser(std::string input)
     return argumentVector;
 }
 
-
 int main(int argc, char **argv)
 {
 
     return 0;
 }
-
-
-

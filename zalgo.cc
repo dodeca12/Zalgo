@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string>
 #include <time.h>
+#include <bits/stdc++.h>
 
 Zalgo::Zalgo()
 {
@@ -62,6 +63,12 @@ std::vector<int> argumentParser(std::string input)
     std::vector<int> argumentVector;
     std::string tempString = "";
 
+    if (input == "-random" || input == "-r")
+    {
+        argumentVector.push_back(-1);
+        return argumentVector;
+    }
+
     for (int i = 0; i < input.length(); i++)
     {
         if (input[i] == '-')
@@ -91,6 +98,15 @@ std::vector<int> argumentParser(std::string input)
 
 int main(int argc, char **argv)
 {
+    std::ios::sync_with_stdio(0);
+    std::cin.tie(NULL);
+    std::cout.tie(NULL);
+
+    if (argc < 2)
+    {
+        std::cout << "Wrong usage" << std::endl;
+        return 1;
+    }
 
     return 0;
 }

@@ -4,7 +4,7 @@
 #include <string>
 #include <ctime>
 #include <regex>
-#include <bits/stdc++.h>
+#include <iostream>
 
 Zalgo::Zalgo()
 {
@@ -177,7 +177,7 @@ int main(int argc, char **argv)
 
     while (getline(std::cin, inputLine))
     {
-        std::cout << zalgo.generateLine(inputLine, aboveCount, middleCount, belowCount, flag) << std::endl;
+        std::cout << zalgo.generateLine(inputLine, aboveCount, middleCount, belowCount, flag);
     }
 
     return 0;

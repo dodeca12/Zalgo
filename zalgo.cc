@@ -2,7 +2,7 @@
 
 #include <stdlib.h>
 #include <string>
-#include <time.h>
+#include <ctime>
 #include <regex>
 #include <bits/stdc++.h>
 
@@ -58,6 +58,8 @@ std::string Zalgo::generateLine(std::string input, int &aboveCount, int &middleC
     {
         zalgoLine += input[i];
 
+        if (!isspace(input[i]) && !ispunct(input[i]))
+        {
         for (int i = 0; i < aboveCount; i++)
             zalgoLine += getDiacritic(0);
 
@@ -66,6 +68,7 @@ std::string Zalgo::generateLine(std::string input, int &aboveCount, int &middleC
 
         for (int i = 0; i < belowCount; i++)
             zalgoLine += getDiacritic(3);
+        }
     }
     return zalgoLine;
 }

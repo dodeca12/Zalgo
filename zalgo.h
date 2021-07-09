@@ -5,24 +5,21 @@
 #include <string>
 #include <vector>
 
-// enum flag
-// {
-//     numbers,
-//     dashR,
-//     dashDashRandom
-// };
+#define ABOVE_DIACRITICS_SIZE 50
+#define MIDDLE_DIACRITICS_SIZE 23
+#define BELOW_DIACRITICS_SIZE 40
 class Zalgo
 {
 public:
     Zalgo();
     ~Zalgo();
-    std::string getDiacritic(int, int);
+    std::string getDiacritic(int);
     std::string generateLine(std::string, int &, int &, int &, int &);
     std::vector<int> argumentParser(std::string);
     int randomCountGenerator(int &);
 
 private:
-    const std::string ABOVE_DIACRITICS[50] = {
+    const std::string ABOVE_DIACRITICS[ABOVE_DIACRITICS_SIZE] = {
         "\u030d", /*     ̍     */ "\u030e", /*     ̎     */ "\u0304", /*     ̄     */ "\u0305", /*     ̅     */
         "\u033f", /*     ̿     */ "\u0311", /*     ̑     */ "\u0306", /*     ̆     */ "\u0310", /*     ̐     */
         "\u0352", /*     ͒     */ "\u0357", /*     ͗     */ "\u0351", /*     ͑     */ "\u0307", /*     ̇     */
@@ -38,7 +35,7 @@ private:
         "\u0346", /*     ͆     */ "\u031a"  /*     ̚     */
     };
 
-    const std::string MIDDLE_DIACRITICS[23] = {
+    const std::string MIDDLE_DIACRITICS[MIDDLE_DIACRITICS_SIZE] = {
         "\u0315", /*     ̕     */ "\u031b", /*     ̛     */ "\u0340", /*     ̀     */ "\u0341", /*     ́     */
         "\u0358", /*     ͘     */ "\u0321", /*     ̡     */ "\u0322", /*     ̢     */ "\u0327", /*     ̧     */
         "\u0328", /*     ̨     */ "\u0334", /*     ̴     */ "\u0336", /*     ̵     */ "\u0336", /*     ̶     */
@@ -47,7 +44,7 @@ private:
         "\u0337", /*     ̷     */ "\u0361", /*     ͡     */ "\u0489"  /*     ҉_    */
     };
 
-    const std::string BELOW_DIACRITICS[40] = {
+    const std::string BELOW_DIACRITICS[BELOW_DIACRITICS_SIZE] = {
         "\u0316", /*     ̖     */ "\u0317", /*     ̗     */ "\u0318", /*     ̘     */ "\u0319", /*     ̙     */
         "\u031c", /*     ̜     */ "\u031d", /*     ̝     */ "\u031e", /*     ̞     */ "\u031f", /*     ̟     */
         "\u0320", /*     ̠     */ "\u0324", /*     ̤     */ "\u0325", /*     ̥     */ "\u0326", /*     ̦     */

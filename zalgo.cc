@@ -14,31 +14,21 @@ Zalgo::~Zalgo()
 {
 }
 
-std::string Zalgo::getDiacritic(int position, int repeatCount)
+std::string Zalgo::getDiacritic(int position)
 {
     std::string glyphWithDiacritic = "";
-    srand(time(NULL));
 
     if (position == 0)
     {
-        for (int i = 0; i < repeatCount; i++)
-        {
-            glyphWithDiacritic += this->ABOVE_DIACRITICS[rand() % 50];
-        }
+        glyphWithDiacritic = this->ABOVE_DIACRITICS[rand() % ABOVE_DIACRITICS_SIZE];
     }
     else if (position == 1)
     {
-        for (int i = 0; i < repeatCount; i++)
-        {
-            glyphWithDiacritic += this->MIDDLE_DIACRITICS[rand() % 23];
-        }
+        glyphWithDiacritic = this->MIDDLE_DIACRITICS[rand() % MIDDLE_DIACRITICS_SIZE];
     }
     else if (position == 3)
     {
-        for (int i = 0; i < repeatCount; i++)
-        {
-            glyphWithDiacritic += this->BELOW_DIACRITICS[rand() % 40];
-        }
+        glyphWithDiacritic = this->BELOW_DIACRITICS[rand() % BELOW_DIACRITICS_SIZE];
     }
 
     return glyphWithDiacritic;
@@ -67,9 +57,15 @@ std::string Zalgo::generateLine(std::string input, int &aboveCount, int &middleC
     for (int i = 0; (unsigned)i < input.length(); i++)
     {
         zalgoLine += input[i];
-        zalgoLine += getDiacritic(0, aboveCount);
-        zalgoLine += getDiacritic(1, middleCount);
-        zalgoLine += getDiacritic(3, belowCount);
+
+        for (int i = 0; i < aboveCount; i++)
+            zalgoLine += getDiacritic(0);
+
+        for (int i = 0; i < middleCount; i++)
+            zalgoLine += getDiacritic(1);
+
+        for (int i = 0; i < belowCount; i++)
+            zalgoLine += getDiacritic(3);
     }
     return zalgoLine;
 }
@@ -115,7 +111,6 @@ std::vector<int> Zalgo::argumentParser(std::string input)
 
 int Zalgo::randomCountGenerator(int &input)
 {
-    srand(time(0));
 
     if (input == -1)
         return (rand() % 100 + 1);
@@ -134,6 +129,7 @@ int main(int argc, char **argv)
     std::ios::sync_with_stdio(0);
     std::cin.tie(NULL);
     std::cout.tie(NULL);
+    srand(time(NULL));
 
     if (argc < 2 || argc > 2)
     {
@@ -175,7 +171,6 @@ int main(int argc, char **argv)
     }
 
     std::string inputLine;
-    // int x = -1;
 
     while (getline(std::cin, inputLine))
     {

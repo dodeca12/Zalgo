@@ -35,3 +35,9 @@ test/
 
 # Ignore dot files
 .vscode/
+
+# Ignore test.txt file
+test.txt
+
+# Ignore zalgotest.txt file
+zalgotext.txt

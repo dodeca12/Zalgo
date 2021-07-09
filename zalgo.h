@@ -5,14 +5,21 @@
 #include <string>
 #include <vector>
 
+// enum flag
+// {
+//     numbers,
+//     dashR,
+//     dashDashRandom
+// };
 class Zalgo
 {
 public:
     Zalgo();
     ~Zalgo();
     std::string getDiacritic(int, int);
-    std::string generateLine(std::string, int, int, int);
+    std::string generateLine(std::string, int &, int &, int &, int &);
     std::vector<int> argumentParser(std::string);
+    int randomCountGenerator(int &);
 
 private:
     const std::string ABOVE_DIACRITICS[50] = {
@@ -28,16 +35,16 @@ private:
         "\u0366", /*     ͦ     */ "\u0367", /*     ͧ     */ "\u0368", /*     ͨ     */ "\u0369", /*     ͩ     */
         "\u036a", /*     ͪ     */ "\u036b", /*     ͫ     */ "\u036c", /*     ͬ     */ "\u036d", /*     ͭ     */
         "\u036e", /*     ͮ     */ "\u036f", /*     ͯ     */ "\u033e", /*     ̾     */ "\u035b", /*     ͛     */
-        "\u0346", /*     ͆     */ "\u031a"                                                    /*     ̚     */
+        "\u0346", /*     ͆     */ "\u031a"  /*     ̚     */
     };
 
     const std::string MIDDLE_DIACRITICS[23] = {
-        "\u0315", /*     ̕     */ "\u031b", /*     ̛     */ "\u0340", /*     ̀     */ "\u0341",   /*     ́     */
-        "\u0358", /*     ͘     */ "\u0321", /*     ̡     */ "\u0322", /*     ̢     */ "\u0327",   /*     ̧     */
-        "\u0328", /*     ̨     */ "\u0334", /*     ̴     */ "\u0336", /*     ̵     */ "\u0336",   /*     ̶     */
+        "\u0315", /*     ̕     */ "\u031b", /*     ̛     */ "\u0340", /*     ̀     */ "\u0341", /*     ́     */
+        "\u0358", /*     ͘     */ "\u0321", /*     ̡     */ "\u0322", /*     ̢     */ "\u0327", /*     ̧     */
+        "\u0328", /*     ̨     */ "\u0334", /*     ̴     */ "\u0336", /*     ̵     */ "\u0336", /*     ̶     */
         "\u034f", /*     ͏     */ "\u035c", /*     ͜     */ "\u035d", /*     ͝     */ "\u035e", /*     ͞     */
-        "\u035f", /*     ͟     */ "\u0360", /*     ͠     */ "\u0362", /*     ͢     */ "\u0338",   /*     ̸     */
-        "\u0337", /*     ̷     */ "\u0361", /*     ͡     */ "\u0489"                             /*     ҉_     */
+        "\u035f", /*     ͟     */ "\u0360", /*     ͠     */ "\u0362", /*     ͢     */ "\u0338", /*     ̸     */
+        "\u0337", /*     ̷     */ "\u0361", /*     ͡     */ "\u0489"  /*     ҉_    */
     };
 
     const std::string BELOW_DIACRITICS[40] = {

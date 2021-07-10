@@ -134,7 +134,7 @@ int main(int argc, char **argv)
     std::cout.tie(NULL);
     srand(time(NULL));
 
-    if (argc < 2 || argc > 2)
+    if (argc > 2)
     {
 
         std::cout << "Wrong usage" << std::endl;
@@ -148,7 +148,11 @@ int main(int argc, char **argv)
 
     Zalgo zalgo;
 
-    if (std::regex_match(argv[1], std::regex("(^(\\d{1,}|(random))-(\\d{1,}|(random))-(\\d{1,}|(random)))|(^--random)|(^-r)")))
+    if (argc == 1)
+    {
+        aboveCount = middleCount = belowCount = flag = -10;
+    }
+    else if (std::regex_match(argv[1], std::regex("(^(\\d{1,}|(random))-(\\d{1,}|(random))-(\\d{1,}|(random)))|(^--random)|(^-r)")))
     {
         if (std::regex_match(argv[1], std::regex("^(\\d{1,}|(random))-(\\d{1,}|(random))-(\\d{1,}|(random))")))
         {
@@ -158,11 +162,7 @@ int main(int argc, char **argv)
             belowCount = arguments[2];
             flag = 0;
         }
-        else if (std::regex_match(argv[1], std::regex("^-r")))
-        {
-            aboveCount = middleCount = belowCount = flag = -10;
-        }
-        else
+        else if (std::regex_match(argv[1], std::regex("(^--random)|(^-r)")))
         {
             aboveCount = middleCount = belowCount = flag = -100;
         }

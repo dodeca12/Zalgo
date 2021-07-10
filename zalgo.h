@@ -6,7 +6,7 @@
 #include <vector>
 
 #define ABOVE_DIACRITICS_SIZE 50
-#define MIDDLE_DIACRITICS_SIZE 23
+#define MIDDLE_DIACRITICS_SIZE 22
 #define BELOW_DIACRITICS_SIZE 40
 class Zalgo
 {
@@ -41,7 +41,7 @@ private:
         "\u0328", /*     ̨     */ "\u0334", /*     ̴     */ "\u0336", /*     ̵     */ "\u0336", /*     ̶     */
         "\u034f", /*     ͏     */ "\u035c", /*     ͜     */ "\u035d", /*     ͝     */ "\u035e", /*     ͞     */
         "\u035f", /*     ͟     */ "\u0360", /*     ͠     */ "\u0362", /*     ͢     */ "\u0338", /*     ̸     */
-        "\u0337", /*     ̷     */ "\u0361", /*     ͡     */ "\u0489"  /*     ҉_    */
+        "\u0337", /*     ̷     */ "\u0361", /*     ͡     */
     };
 
     const std::string BELOW_DIACRITICS[BELOW_DIACRITICS_SIZE] = {

@@ -69,5 +69,7 @@ zalgo [<b>-h</b> | <b>--help</b> HELP] [<b>-r</b> | <b>--random</b> RANDOM] [PAT
 
 #### Argument Flags Description
 
-> Note: Zalgo performs diacritic concatenation at three locations of a glyph: above (eg: T̿H̽Ê DͣĚÉP̑ ǑN̏EͣS̚), with-in/in-between (eg: T́͘͡H̷̛͟E͢͝͡ D̨̨͞Ȩ͟͏È̸̢P̶͟͞ Ơ͝͝Ń̡̡E̸̷͢S͏̸͡), and below (eg: T̙H͓E̲ DͅE͖ḘP̱ O͍N̗E͔S͕).
+> ***Note:*** Zalgo performs diacritic concatenation at three locations of a glyph: above (eg: T̿H̽Ê DͣĚÉP̑ ǑN̏EͣS̚), with-in/in-between (eg: T́͘͡H̷̛͟E͢͝͡ D̨̨͞Ȩ͟͏È̸̢P̶͟͞ Ơ͝͝Ń̡̡E̸̷͢S͏̸͡), and below (eg: T̙H͓E̲ DͅE͖ḘP̱ O͍N̗E͔S͕). Each of the previous examples underwent diacritical concatenation of magnitude one (as in only one diacritical mark is added to each glyph).  
+
+
 

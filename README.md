@@ -39,7 +39,7 @@ Zalgo is implemented in C++. Zalgo can be compiled with both [GCC's g++](https:/
 
 Please ensure that either one of the compilers is installed. In most Linux distros usually have GCC installed, and the LLVM Clang compiler is the default compiler on MacOS.  
 
-The [makefile](https://github.com/dodeca12/Zalgo/blob/master/makefile) uses the OS default. 
+The [makefile](https://github.com/dodeca12/Zalgo/blob/master/makefile) uses the OS default.
 
 Zalgo only targets *NIX systems, but can be run on [WSL](https://docs.microsoft.com/en-us/windows/wsl/about) for Windows.
 
@@ -57,7 +57,7 @@ make
 
 #### Overview
 
-Zalgo - a C++ Unicode text polluter 
+Zalgo - a C++ Unicode text polluter  
 
 Zalgo runs on the command line, and as such, uses [UNIX pipes](https://en.wikipedia.org/wiki/Pipeline_(Unix)) and other UNIX stdin streams.  
 
@@ -71,5 +71,15 @@ zalgo [<b>-h</b> | <b>--help</b> HELP] [<b>-r</b> | <b>--random</b> RANDOM] [PAT
 
 > ***Note:*** Zalgo performs diacritic concatenation at three locations of a glyph: above (eg: T̿H̽Ê DͣĚÉP̑ ǑN̏EͣS̚), with-in/in-between (eg: T́͘͡H̷̛͟E͢͝͡ D̨̨͞Ȩ͟͏È̸̢P̶͟͞ Ơ͝͝Ń̡̡E̸̷͢S͏̸͡), and below (eg: T̙H͓E̲ DͅE͖ḘP̱ O͍N̗E͔S͕). Each of the previous examples underwent diacritical concatenation of magnitude one (as in only one diacritical mark is added to each glyph).  
 
+> As such, the format of diacritical concatenation is in the form of `^\d{1,}-\d{1,}-\d{1,}` - which corresponds to a regular expression in the form of `ABOVE-MIDDLE-BELOW`.  
 
+Zalgo can be run without any flags. Not passing in any flags will result in a random number between 1 and 10 (inclusive) being selected as magnitude for each of the diacritical locations (`ABOVE-MIDDLE-BELOW`).  
+
+|Flag  |Description  |
+|:---------|---------:|
+| `-h` or `--help` | Outputs [synopsis](#Synopsis) |
+| `-r` or `--random` | Selects a random number between 1 and 100 (inclusive) as magnitude for each of the diacritical locations (`ABOVE-MIDDLE-BELOW`) |
+| PATTERN (in regex) `^\d{1,}-\d{1,}-\d{1,}` | Use this argument to specify custom magnitudes for each of the diacritical locations (`ABOVE-MIDDLE-BELOW`) |
+
+For more clarification on flag usage, please see [examples](#Examples).
 

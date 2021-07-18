@@ -19,6 +19,8 @@
     - [Overview](#overview)
     - [Synopsis](#synopsis)
     - [Argument Flags Description](#argument-flags-description)
+    - [Examples](#examples)
+    - [~~LICENSE~~ LICENCE](#license-licence)
 
 ### What is Zalgo?
 
@@ -83,3 +85,38 @@ Zalgo can be run without any flags. Not passing in any flags will result in a ra
 
 For more clarification on flag usage, please see [examples](#Examples).
 
+#### Examples
+
+Since Zalgo makes uses of stdio streams - there are many ways to use Zalgo
+
+- Using UNIX pipes
+  ```bash
+  $ echo "THE DEEP ONES" | zalgo # No magnitude flag specified, defaulting to random magnitudes for each diacritcal location (1 to 10, inclusive)
+
+  T̶̛̛̛̥̦̜̏ͫ͢͜͢͝Hͫͨ͘͟͏̛̛̭͚̫́͘͜Ę̶̶̥̟̤ͥ̊̕͜͜͝͞ D̏̓͝͏͏̸͏̙͖̥́͘͡Ę̸̟̲̲̿̆̀́̀̕͜͝E̸̶̴̢̛̯̟̳̽̔͘͢͟P̴̷̶̹̻͔͐ͮ́͘͠͝͠ O̶̴̧̧̧̙͕̫̾̚͘͡͠N̡̿͐̕͞͏̢̢͖̭͎̕͜Ę̶̴̶̷̛͂͂͟͏̦͎͕S̶̡̢̡̢̬̖̤̾̑́͜͞  # Zalgo-text output
+
+  $ echo "THE DEEP ONES" | zalgo -r # Random flag specified
+
+
+
+  
+  T̛̞̜̺̹̬̘̞̥͉̣̮͕̖̼̜̱̲̰̦͕̤̥̺̥͙̠͎͙̟͎͖̦̭̰̼̰̮̝̲̠͙͉͕͙̭̖̮͙̰̱͎̱͉̠̳̰̭̫̮̹̞̪̼̬͎̝͔̘̥̟̥̟͙̝̜̝̝̪̙̭͓͇̬͖̥͕̈̈̐̑͆͛̏̔ͤ̀̂̈͒̓ͫ͛ͤ̍̒̚͘ͅͅH̡͇̮̮̠̝͎͖̭̰̖͎̹̩̟͎̦͙̯̫̲̪͇̜̰̘̺̳̱̘̳̙̳̣̱͉̝̪̼̪̺̰̝̠͍̪͎̘̘̥̮̺̭͙̱͕̣͙̤̰̣͍̹̲͍͕̩͇̠͉̗̻̗͚̻͓̙̮̞̱͖̳͖͔̘̹̻͍ͤ͂̿̃̅̓̋͋̊̽̿ͥͤͫͥͫ̃̇͋́̕ͅẺ̟̗͓͕͇̯̩̰̘̮̥̯͈̫̭͙͉͕̪͇̫̞͇̺̺̪͚̦̼̤̰͕̫̫̹̻̼͔̰͖͖͙̮̥̞̫͎̗̰̲̬̮̗̖̗̬͉̪̗͍̺̱̼͉͔̗̟̩͇̖̺̺̯͉̺̰̹͖͎̣̪͔͍̟̑ͪ̓̔ͬ͒ͥͦ̈́̈́̋ͫ͒̒ͦͭͣ̑̚̕͠ͅͅͅͅ D̦͕͕͖͔̤͉̮̭͍͉͇̻̭̟̘͔̟̥̱̰̟̻͎̱̬̟̩̟̬̫̘̦̗̦͓̯̰̭̗̟̗̱̹̠̳̥̬̺̳͕͍̠̰̙̬̟͔͔̹̠͖̼̤̖̱̱̰͖̪͉͓̘͚̟̜̞͍͓̬͕̜̥͗̊̈̌̿̋̉ͣ͋ͨͦ̆ͬ̈́ͭ̅̊̊͑̚͟͠ͅͅͅͅͅE̙͚̫̳͍̲̮͖͎̰̰̘̟͈͕̜͕̞̥͓͉̱̥̥̦̟̩̞̩̥̗̦̭̭͔͚͓̳̳̝̘̺̜̹̦̠̯̮̥̦̟͉̪̤̗̱̲̱̯̼̳̩͙̣͇͍͈̪̫̦̥̠̬͍͚̹̗̟͔̜̬̭̮̭̥͚ͬ̎͒̋̏ͭͤ̋ͩ̾̈́̎̒̓ͪ̇̿ͪͤͩ́͝ͅͅE̱̤̳̻̖̜͉͔̯͚̥̹̰̬̙̩̤̞̖͔̖̬͓̼͇̭̜̠̻͇̙͎͉̮̯̖̟̱̹̼͕̘̫͚̞̬͖͚̗͙̪͕̹̗̦̰̘͈̞͉̺̻̫̫̘̺̟̘̜͉͇̣̻͔͈̹̥̯̳̦̬͕̒̃̾ͦ͐̃ͭ̿͋̾̊̉̉̈́ͬͬͣ̐ͯͣ̕͠ͅͅͅͅͅͅP̷̪̰̙̬͙̻̯̜̪̮̼͔̦͇̮̘͖̳̗̲̗̫̤͖͕̣͕͚̥͓̯̬̜̲͉̘̣̖͚̜̤̮͚̱͙̬̫̻͙̬̞͉͉̭̼̻̟̲̬̤̞͓̺̥̞̞̜̝̟͕̤̭̩̟͙̗̫̦̼̙̰͎͓̤̖̦̼̖͆͑͗̄̎͐ͫͨ͐͊ͣ͗ͣ͆̅̃ͪ͊ͣͨ͢ Ǫ̶̮̰͎̥̱͎̫̞͎͚̟͔̪͓͇͚͔̱̰̺̩͇͍̩̖͉̤̳̜̤̲̲̲̝̹̗͉͙̠̫͇̟̠͓̗͇͍̗̘̦̪͉͔̮͍̻̼̝̲̯͔̠̭̮̥̞̟̥̱̮͈̱̯̤̙͙̥̝̠̬͇̙͎̦̱̀ͫ͗̈ͮ̀ͯ̍ͬͫ͆̆͛ͨ͑̏͛̂ͣ̚ͅͅͅN̛̫̙̜̲̹̟̫͔̰̺̘̩̳̱̣͈̬̜͙̬̟̭̱͉̜̫͎̘̯͉͚͎͓̙̪̭̘̰̘̫̜̜̼̼̺̼̟͍͉̝̣͈̪̰̰̤͔̩̦̩̘̥͖̝̗͕̟̲͙̲̮̗̖̙̮̼̦̗̠̠̖͙̲̰̮͉̝ͨ͋̇ͦͦͯ̈́ͤͤ͋̃̅ͨ͐̍̈́̀ͬͦͣ͝ͅẸ̡͕͙͙̠̤̞͉̞̰̺̭͔̰̲͇̩̱̮̩͎̙̮̲̳͍̞̯̳͓̠̫͈͙̦͈͚̤̱̝͇̜̲̳̬̘̘̰̬̰͍̣̫̗̪͖̺̦̞͚͖̫̩̮̜̬̟̘̺̟̩̹͇̼͚̹̱̯͉̣̗͈̝͔͔͓̯̽̊͌́̑̓ͬ̃ͩ̓͑̃̈́ͣͩ̐̊̄̾̂͜ͅS̛̞̺̳͉̮̫̹͕̰̬̩̪̫͔̻̭̣͕̲̱̗͔̫̲̰͎̙̩̲̗͇͖͇̥̪̘̼̖̫͓̝̰̟̣͖̺͚͎̝̯̻̣̻͚̯͖͍̲̠̜̫͇̖͕̣̝͙̮̞̙̥̦̬̯̥̙͔̖͕̣̥̩͍̦̤ͥ̔͊ͬ̾͌̂̔ͯ͋ͯ͗ͥ̄͂ͨͫ̉̈́̚͞ͅͅͅ # Zalgo-text output
+
+
+
+
+
+
+
+
+
+
+
+
+
+  $ echo 
+  ```
+
+#### ~~LICENSE~~ LICENCE
+
+`Micro` is ~~licensed~~ licenced under the [BSD 3-Clause licence](https://opensource.org/licenses/BSD-3-Clause). For more information, check out [LICENCE](LICENSE).

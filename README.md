@@ -21,6 +21,7 @@
     - [Argument Flags Description](#argument-flags-description)
     - [Examples](#examples)
     - [~~LICENSE~~ LICENCE](#license-licence)
+    - [Issues](#issues)
 
 ### What is Zalgo?
 
@@ -81,17 +82,18 @@ Zalgo can be run without any flags. Not passing in any flags will result in a ra
 |:---------|---------:|
 | `-h` or `--help` | Outputs [synopsis](#Synopsis) |
 | `-r` or `--random` | Selects a random number between 1 and 100 (inclusive) as magnitude for each of the diacritical locations (`ABOVE-MIDDLE-BELOW`) |
-| PATTERN (in regex) `^\d{1,}-\d{1,}-\d{1,}` | Use this argument to specify custom magnitudes for each of the diacritical locations (`ABOVE-MIDDLE-BELOW`) |
+| PATTERN (in regex) `^\d{1,}\|(random)-\d{1,}\|(random)-\d{1,}\|(random)` | Use this argument to specify custom magnitudes for each of the diacritical locations (`ABOVE-MIDDLE-BELOW`). `random` can be substituted for a custom magnitude in any and all diacritical locations (where `random` specifies a magnitude between `1-100` inclusive)  |
 
 For more clarification on flag usage, please see [examples](#Examples).
 
 #### Examples
 
-Since Zalgo makes uses of stdio streams - there are many ways to use Zalgo
+Since Zalgo makes uses of `stdio` streams - there are many ways to use Zalgo
 
 - Using UNIX pipes
+
   ```bash
-  $ echo "THE DEEP ONES" | zalgo # No magnitude flag specified, defaulting to random magnitudes for each diacritcal location (1 to 10, inclusive)
+  $ echo "THE DEEP ONES" | zalgo # No magnitude flag specified, defaulting to random magnitudes for each diacritical location (1 to 10, inclusive)
 
   T̶̛̛̛̥̦̜̏ͫ͢͜͢͝Hͫͨ͘͟͏̛̛̭͚̫́͘͜Ę̶̶̥̟̤ͥ̊̕͜͜͝͞ D̏̓͝͏͏̸͏̙͖̥́͘͡Ę̸̟̲̲̿̆̀́̀̕͜͝E̸̶̴̢̛̯̟̳̽̔͘͢͟P̴̷̶̹̻͔͐ͮ́͘͠͝͠ O̶̴̧̧̧̙͕̫̾̚͘͡͠N̡̿͐̕͞͏̢̢͖̭͎̕͜Ę̶̴̶̷̛͂͂͟͏̦͎͕S̶̡̢̡̢̬̖̤̾̑́͜͞  # Zalgo-text output
 
@@ -114,9 +116,83 @@ Since Zalgo makes uses of stdio streams - there are many ways to use Zalgo
 
 
 
-  $ echo 
+  $ echo "Cthulu" | zalgo 2-0-random
+  C̙͈̺̞̜͈͇͕̱͓͈͙̪̫̪̠̻̞̣̪̞̬̼̭̣̠͍̯͇̣̪͓̜̘̫͍̫̟̩̦̱̯̭̣̼̗̝̻̟̜̖̼͉̭̻͚̖̙̯͕͍̩͍̻̼̫̣̼̼̘͚̜̯͚͉̱͕̟̣̟̝̲̭͉̰̭͓͉͕̱̲̔̚ͅͅͅͅͅṭ̼̻͚̩̦̗̥̟̦̖͙͍͖̜̥͕̜̬̮̱͙͇͇̹̯̹̙͎̳̬͍̖̖̲̩̜̫̬̦̼̟̗̤̙͙̩͍̗̰̠̪̮͇̗̖̣̭̙͍͍̥̫͍̙͕͖̣̥̦̥͇̥̦͙̫̗̗̝̘̲̝̭͚͓̤͉͎̼̻̬̮͇͈̖͍͛ͫh͉̣͎̬̥͖̜̺͙͚̲̣̰̼̟̤̦̮͍̜͕̭̦̜̜̗̜̯̗̤̝̖̘̩̥͚̭̼̫̣̼̻̻̼̼͙̙̮͓͉̼̜͔͉͙͚̥̬̣̰̱͎̲̺͔̦̗̪͚̟̩̮̻͚̙̦͚̲̩͇̟̠̳͙̞̩̟̲̜̰͔͖́̈́ͅͅͅͅu̳̩̦͕̥̦̠͖͚̳̣̮̱̱͈̖͙̳̮̙̭̮͍͕̦͇̲̗̖͓͙̘̜͙̳͎̜̹͖̮̜̻̮̹̫͎͎̥̰̤̥͖͉͈̺̦͉̺͖̰̰͎̠̗̺͙̖̹̫͖̖̺̰̬̭̩̻͕̪̜͙̤͔̼͔͙̠̥͔̔͆ͅͅͅͅͅͅͅl̯͇̳̙̠̩͕͍̯͍͎̘̘̟̥̞̺̝̰͇̘̲̫̱̟̙͈̮͈̤̣̠͈̲̦͙͓͚̲̩͈̪̞͍̩̮͉͇̫̤̠̤̳̳͈͈̻̥̟̬̦̞̹͓̰̼͉̝̭̦̤̝̭̬͇̱̺̯̠̣̱̭̠͔͚͈̺̭͎̹̹̙͈͚͖̖̔̓ű̝͎̳̫͈͍̳̤̦̞̱̱͙͎͇̝̼̥͕̰͓̥̫̫̖̙̬̭̫̩̖͇̰̲̰͓͉͍̣̥̙͈̘͍͔̲̥̪͍͙̺̮̟̣̹̣͔͉̟̠̙̟͖̫͇̭̟̦̣͚̪̘̠̻̫͈͖̩̻̩͈̻̙̪̺͙̙͎̝͚͍͓͌ͅͅͅͅ  # Here the Zalgo-text output has a above diacritical magnitude of 2, a middle magnitude of 0, and the below magnitude of a random number between 1 and 100 inclusive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ```
+
+- Using redirection  
+  TODO: Add redirection support
+
+- Fun with pipes  
+  Zalgo can be used in conjunction with other commands
+
+  ```bash
+  $ echo "The Ancient Ones" | zalgo | cowsay
+  __________________
+  < T̴̮̟̼͉̥͎̘͙͗̕͘͞͡͝͝ẖ̷̶̡̛̙̩̭̭̦͕ͬ̀͟͠ͅẹ̴̷̢̨̛͕͙̹͙̼͕̾͢͡ͅ A̶̶̶̛̗̻͍̤͖̼͖͔͑̀̕͠n̷̨̟̮͓̹̞̩̥̞̂̕͢͡͠͞c̷̶̶̢̢̻͉̰̪̤̭̠͎ͣ͝͡i̸̡̢̢͔͙̗̖̗̩̣̺ͥ̕͡͞ȩ̴̴̢̹͇̣̺̜̟̭̘ͪ́͘͠n̸̨͑̀́͏̶̶̗̗͈̘̝̱̯͇t̸̷̴͎̭̙͈̬̦̹̯̚̕͘͘͜ O̚͏̶̧͓͓͎͉̝̙̯̼̕͡͠͝n̶̶̿͏̴̸̗̖̹̮̦̞͕͎̀͞ẽ̷̶̷̶͙̤͓̘̜̩̱̥́͢͝s̴̴̷̰͇͓̳̼͇̬̭̚͘͜͠͞ >
+  ------------------
+          \   ^__^
+          \   (oo)\_______
+              (__)\       )\/\
+                  ||----w |
+                  ||     ||
+  $ echo You will be audited for commiting tax fraud. | ./zalgo 2-1-2 | cowsay -f calvin
+  _______________________________________
+  / Ỵ̫ͬͦ͠o̶̦̹̔̏u̥̰ͬ͛͝ w̶̘̪ͫ̔ị̧̼ͤ͒l͎̱͊̈͘l̨̮̭ͮͯ ḅ͓̉̔͜e̞͓͒̇͞ ả̡̤͎ͧu̺̫͆ͭ͝d̛͍̭ͨ̇ị̸͔̽ͥt̢̞̳ͫ͐e̡̟̗ͬ̿d͒̚͏̜̖ f̛̼̞͂ͬo͚̖ͧ̚͢r̡̹̯͋ͩ c̩͉̅̀͘o̶̳̲̾͂m̶̖̺̏͑m͓ͬͦ͠ͅį̰̟ͧ̾ț̨͎̄͗ȉ͍̼̀͘n̬͈ͨ̏͢g̮̺ͭͮ̀ t̶̤̠͆͌a̧̯̯ͦͧx̶̘̬̀̈ \
+  \ f͈̫̔̎͠r̢̖͔͒ͧa͙̹ͭ̈́́u̶̯̮̓ͦd̢͉̜ͣ̿.                                /
+  ---------------------------------------
+  \                   .,
+    \         .      .TR   d'
+      \      k,l    .R.b  .t .Je
+        \   .P q.   a|.b .f .Z%
+            .b .h  .E` # J: 2`     .
+        .,.a .E  ,L.M'  ?:b `| ..J9!`.,
+        q,.h.M`   `..,   ..,""` ..2"`
+        .M, J8`   `:       `   3;
+    .    Jk              ...,   `^7"90c.
+      j,  ,!     .7"'`j,.|   .n.   ...
+    j, 7'     .r`     4:      L   `...
+    ..,m.      J`    ..,|..    J`  7TWi
+    ..JJ,.:    %    oo      ,. ....,
+      .,E      3     7`g.M:    P  41
+    JT7"'      O.   .J,;     ``  V"7N.
+    G.           ""Q+  .Zu.,!`      Z`
+    .9.. .         J&..J!       .  ,:
+        7"9a                    JM"!
+          .5J.     ..        ..F`
+              78a..   `    ..2'
+                  J9Ksaw0"'
+                .EJ?A...a.
+                q...g...gi
+                .m...qa..,y:
+                .HQFNB&...mm
+                ,Z|,m.a.,dp
+              .,?f` ,E?:"^7b
+              `A| . .F^^7'^4,
+              1.MMMMMMMMMMMQzna,
+          ...f"A.JdT     J:    Jp,
+            `JNa..........A....af`
+                `^^^^^'`
   ```
 
 #### ~~LICENSE~~ LICENCE
 
 `Micro` is ~~licensed~~ licenced under the [BSD 3-Clause licence](https://opensource.org/licenses/BSD-3-Clause). For more information, check out [LICENCE](LICENSE).
+
+#### Issues
+
+The "Zalgo-ification" effect of text pollution is heavily dependant on the text-rendering settings of a computer (or application). Many different factors affect the ability and magnitude of the text pollution effect caused by Zalgo - different operating systems, browsers, text/font settings, and even hardware all make Zalgo-text appear different.  

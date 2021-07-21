@@ -138,7 +138,9 @@ int main(int argc, char **argv)
     {
 
         std::cout << "Wrong usage" << std::endl;
-        return 1;
+        std::cout << "zalgo [-h | --help HELP] [-r | --random RANDOM] [PATTERN]" << std::endl;
+        std::cout << "\nWhere PATTERN is (in regex) ^\\d{1,}|(random)-\\d{1,}|(random)-\\d{1,}|(random) corresponding to diacritical concatenation locations of ABOVE-MIDDLE-BELOW" << std::endl;
+        return -1;
     }
 
     int aboveCount = 0;
@@ -152,7 +154,7 @@ int main(int argc, char **argv)
     {
         aboveCount = middleCount = belowCount = flag = -10;
     }
-    else if (std::regex_match(argv[1], std::regex("(^(\\d{1,}|(random))-(\\d{1,}|(random))-(\\d{1,}|(random)))|(^--random)|(^-r)")))
+    else if (std::regex_match(argv[1], std::regex("(^(\\d{1,}|(random))-(\\d{1,}|(random))-(\\d{1,}|(random)))|(^--random)|(^-r)|(^-h)|(^--help)")))
     {
         if (std::regex_match(argv[1], std::regex("^(\\d{1,}|(random))-(\\d{1,}|(random))-(\\d{1,}|(random))")))
         {
@@ -166,11 +168,19 @@ int main(int argc, char **argv)
         {
             aboveCount = middleCount = belowCount = flag = -100;
         }
+        else if (std::regex_match(argv[1], std::regex("(^-h)|(^--help)")))
+        {
+            std::cout << "zalgo [-h | --help HELP] [-r | --random RANDOM] [PATTERN]" << std::endl;
+            std::cout << "\nWhere PATTERN is (in regex) ^\\d{1,}|(random)-\\d{1,}|(random)-\\d{1,}|(random) corresponding to diacritical concatenation locations of ABOVE-MIDDLE-BELOW" << std::endl;
+            return 0;
+        }
     }
     else
     {
         std::cout << "Wrong usage" << std::endl;
-        return -1;
+        std::cout << "zalgo [-h | --help HELP] [-r | --random RANDOM] [PATTERN]" << std::endl;
+        std::cout << "\nWhere PATTERN is (in regex) ^\\d{1,}|(random)-\\d{1,}|(random)-\\d{1,}|(random) corresponding to diacritical concatenation locations of ABOVE-MIDDLE-BELOW" << std::endl;
+        return 1;
     }
 
     std::string inputLine;

@@ -195,4 +195,4 @@ Since Zalgo makes uses of `stdio` streams - there are many ways to use Zalgo
 
 #### Issues
 
-The "Zalgo-ification" effect of text pollution is heavily dependant on the text-rendering settings of a computer (or application). Many different factors affect the ability and magnitude of the text pollution effect caused by Zalgo - different operating systems, browsers, text/font settings, and even hardware all make Zalgo-text appear different.  
+The "Zalgo-ification" effect of text pollution is heavily dependant on the text-rendering settings of a computer (or application). Many different factors affect the ability and magnitude of the text pollution effect caused by Zalgo - different operating systems, browsers, text/font settings, and even hardware all make Zalgo-text appear different. For example:  

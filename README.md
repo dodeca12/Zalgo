@@ -78,11 +78,11 @@ zalgo [<b>-h</b> | <b>--help</b> HELP] [<b>-r</b> | <b>--random</b> RANDOM] [PAT
 
 Zalgo can be run without any flags. Not passing in any flags will result in a random number between 1 and 10 (inclusive) being selected as magnitude for each of the diacritical locations (`ABOVE-MIDDLE-BELOW`).  
 
-|Flag  |Description  |
-|:---------|---------:|
-| `-h` or `--help` | Outputs [synopsis](#Synopsis) |
-| `-r` or `--random` | Selects a random number between 1 and 100 (inclusive) as magnitude for each of the diacritical locations (`ABOVE-MIDDLE-BELOW`) |
-| PATTERN (in regex) `^\d{1,}\|(random)-\d{1,}\|(random)-\d{1,}\|(random)` | Use this argument to specify custom magnitudes for each of the diacritical locations (`ABOVE-MIDDLE-BELOW`). `random` can be substituted for a custom magnitude in any and all diacritical locations (where `random` specifies a magnitude between `1-100` inclusive)  |
+| Flag                                                                     |                                                                                                                                                                                                                                                           Description |
+| :----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `-h` or `--help`                                                         |                                                                                                                                                                                                                                         Outputs [synopsis](#Synopsis) |
+| `-r` or `--random`                                                       |                                                                                                                                       Selects a random number between 1 and 100 (inclusive) as magnitude for each of the diacritical locations (`ABOVE-MIDDLE-BELOW`) |
+| PATTERN (in regex) `^\d{1,}\|(random)-\d{1,}\|(random)-\d{1,}\|(random)` | Use this argument to specify custom magnitudes for each of the diacritical locations (`ABOVE-MIDDLE-BELOW`). `random` can be substituted for a custom magnitude in any and all diacritical locations (where `random` specifies a magnitude between `1-100` inclusive) |
 
 For more clarification on flag usage, please see [examples](#Examples).
 
@@ -196,3 +196,8 @@ Since Zalgo makes uses of `stdio` streams - there are many ways to use Zalgo
 #### Issues
 
 The "Zalgo-ification" effect of text pollution is heavily dependant on the text-rendering settings of a computer (or application). Many different factors affect the ability and magnitude of the text pollution effect caused by Zalgo - different operating systems, browsers, text/font settings, and even hardware all make Zalgo-text appear different. For example:  
+
+|              | Linux (Ubuntu)                                    | macOS                                           | Windows                                            |
+| ------------ | ------------------------------------------------- | ----------------------------------------------- | -------------------------------------------------- |
+| **Firefox**  | ![Firefox-on-Ubuntu](img/Firefox-on-Ubuntu.png)   | ![Firefox-on-macOS](img/Firefox-on-macOS.png)   | ![Firefox-on-Windows](img/Firefox-on-Windows.png)  |
+| **Chromium** | ![Chromium-on-Ubuntu](img/Chromium-on-Ubuntu.png) | ![Chromium-on-macOS](img/Chromium-on-macOS.png) | ![Chromium-on-Ubuntu](img/Chromium-on-Windows.png) |

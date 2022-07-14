@@ -191,7 +191,7 @@ Since Zalgo makes uses of `stdio` streams - there are many ways to use Zalgo
 
 #### ~~LICENSE~~ LICENCE
 
-`Micro` is ~~licensed~~ licenced under the [BSD 3-Clause licence](https://opensource.org/licenses/BSD-3-Clause). For more information, check out [LICENCE](LICENSE).
+`Zalgo` is ~~licensed~~ licenced under the [BSD 3-Clause licence](https://opensource.org/licenses/BSD-3-Clause). For more information, check out [LICENCE](LICENSE).
 
 #### Issues
 

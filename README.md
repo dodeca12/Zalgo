@@ -8,6 +8,8 @@
 </p>
 </p>
 
+Made this because I was bored and I wanted to mess with browser rendering engines.
+
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)

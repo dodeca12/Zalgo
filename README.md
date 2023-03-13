@@ -150,9 +150,9 @@ Since Zalgo makes uses of `stdio` streams - there are many ways to use Zalgo
               (__)\       )\/\
                   ||----w |
                   ||     ||
-  $ echo "You will be audited for commiting tax fraud." | ./zalgo 2-1-2 | cowsay -f calvin
+  $ echo "You will be audited for committing tax fraud." | ./zalgo 2-1-2 | cowsay -f calvin
   _______________________________________
-  / Ỵ̫ͬͦ͠o̶̦̹̔̏u̥̰ͬ͛͝ w̶̘̪ͫ̔ị̧̼ͤ͒l͎̱͊̈͘l̨̮̭ͮͯ ḅ͓̉̔͜e̞͓͒̇͞ ả̡̤͎ͧu̺̫͆ͭ͝d̛͍̭ͨ̇ị̸͔̽ͥt̢̞̳ͫ͐e̡̟̗ͬ̿d͒̚͏̜̖ f̛̼̞͂ͬo͚̖ͧ̚͢r̡̹̯͋ͩ c̩͉̅̀͘o̶̳̲̾͂m̶̖̺̏͑m͓ͬͦ͠ͅį̰̟ͧ̾ț̨͎̄͗ȉ͍̼̀͘n̬͈ͨ̏͢g̮̺ͭͮ̀ t̶̤̠͆͌a̧̯̯ͦͧx̶̘̬̀̈ \
+  / Ỵ̫ͬͦ͠o̶̦̹̔̏u̥̰ͬ͛͝ w̶̘̪ͫ̔ị̧̼ͤ͒l͎̱͊̈͘l̨̮̭ͮͯ ḅ͓̉̔͜e̞͓͒̇͞ ả̡̤͎ͧu̺̫͆ͭ͝d̛͍̭ͨ̇ị̸͔̽ͥt̢̞̳ͫ͐e̡̟̗ͬ̿d͒̚͏̜̖ f̛̼̞͂ͬo͚̖ͧ̚͢r̡̹̯͋ͩ c̩͉̅̀͘o̶̳̲̾͂m̶̖̺̏͑m͓ͬͦ͠ͅį̰̟ͧ̾ț̨͎̄͗tȉ͍̼̀͘n̬͈ͨ̏͢g̮̺ͭͮ̀ t̶̤̠͆͌a̧̯̯ͦͧx̶̘̬̀̈ \
   \ f͈̫̔̎͠r̢̖͔͒ͧa͙̹ͭ̈́́u̶̯̮̓ͦd̢͉̜ͣ̿.                                /
   ---------------------------------------
   \                   .,
